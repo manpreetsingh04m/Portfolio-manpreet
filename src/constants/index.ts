@@ -231,15 +231,15 @@ const projects: TProject[] = [
       "A comprehensive school management system with separate portals for teachers, students, and admins. Features include attendance tracking, homework management, grade management, exam scheduling, and leave approval system.",
     tags: [
       {
-        name: "MERN Stack",
+        name: "Next.js",
         color: "blue-text-gradient",
       },
       {
-        name: "React",
+        name: "Prisma ORM",
         color: "green-text-gradient",
       },
       {
-        name: "Node.js",
+        name: "PostgreSQL",
         color: "pink-text-gradient",
       },
     ],
