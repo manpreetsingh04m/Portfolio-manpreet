@@ -44,7 +44,7 @@ export const config: TConfig = {
     title: "Manpreet Singh Arora — Portfolio",
     fullName: "Manpreet Singh Arora",
     email: "ms2404mk@gmail.com",
-    linkedin: "https://www.linkedin.com/in/manpreetsingharora",
+    linkedin: "https://www.linkedin.com/in/manpreetsingh-arora",
   },
   hero: {
     name: "Manpreet Singh Arora",

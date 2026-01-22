@@ -56,7 +56,7 @@ const Contact = () => {
           toast.success("Thank you! I will get back to you as soon as possible.");
           setForm(INITIAL_STATE);
         },
-        (_error) => {
+        () => {
           setLoading(false);
           toast.error("Something went wrong. Please try again later.");
         }
