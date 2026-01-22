@@ -2,12 +2,11 @@
 
 A modern, fully responsive 3D portfolio website built with React.js, TypeScript, and Three.js. This portfolio showcases my work experience, projects, and skills with an interactive 3D interface.
 
-[![Top Language](https://img.shields.io/github/languages/top/manpreetsingharora/portfolio?logo=typescript&logoColor=%23007ACC&label=TypeScript)](https://www.typescriptlang.org/)
 
 ## 🌐 Live Demo
 
 Explore the live demonstration:
-[Portfolio Website]()
+[Portfolio Website](https://manpreet-singh-xi.vercel.app/)
 
 ## 📝 Description
 
