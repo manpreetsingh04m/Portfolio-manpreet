@@ -25,9 +25,9 @@ import josys from "./company/Josys.png";
 import kalvium from "./company/Kalvium .png";
 import medable from "./company/Medable .png";
 
-import uniquest from "./Uniquest.png";
-import dockerX from "./Docker X.png";
-import schoolManagement from "./schoolManagment.png";
+import uniquest from "./Uniquest.jpeg";
+import dockerX from "./Dockerx .jpeg";
+import schoolManagement from "./school mangment.jpeg";
 
 export {
   logo,

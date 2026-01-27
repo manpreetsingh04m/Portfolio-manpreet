@@ -1,19 +1,22 @@
+import { lazy, Suspense, useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 
-import {
-  About,
-  Contact,
-  Experience,
-  Feedbacks,
-  Hero,
-  Navbar,
-  Tech,
-  Works,
-  StarsCanvas,
-} from "./components";
-import { useEffect } from "react";
+import Hero from "./components/sections/Hero";
+import Navbar from "./components/layout/Navbar";
 import { config } from "./constants/config";
+
+const About = lazy(() => import("./components/sections/About"));
+const Experience = lazy(() => import("./components/sections/Experience"));
+const Tech = lazy(() => import("./components/sections/Tech"));
+const Works = lazy(() => import("./components/sections/Works"));
+const Feedbacks = lazy(() => import("./components/sections/Feedbacks"));
+const Contact = lazy(() => import("./components/sections/Contact"));
+const StarsCanvas = lazy(() =>
+  import("./components/canvas/Stars").then((m) => ({ default: m.default }))
+);
+
+const SectionFallback = () => <div className="min-h-[1px]" aria-hidden />;
 
 const App = () => {
   useEffect(() => {
@@ -54,15 +57,19 @@ const App = () => {
           <Navbar />
           <Hero />
         </div>
-        <About />
-        <Experience />
-        <Tech />
-        <Works />
-        <Feedbacks />
-        <div className="relative z-0">
-          <Contact />
-          <StarsCanvas />
-        </div>
+        <Suspense fallback={<SectionFallback />}>
+          <About />
+          <Experience />
+          <Tech />
+          <Works />
+          <Feedbacks />
+          <div className="relative z-0">
+            <Contact />
+            <Suspense fallback={null}>
+              <StarsCanvas />
+            </Suspense>
+          </div>
+        </Suspense>
       </div>
     </BrowserRouter>
   );

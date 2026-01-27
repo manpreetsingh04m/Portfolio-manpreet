@@ -1,10 +1,13 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, lazy, Suspense } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
 
-import { EarthCanvas } from "../canvas";
 import { SectionWrapper } from "../../hoc";
+
+const EarthCanvas = lazy(() =>
+  import("../canvas/Earth").then((m) => ({ default: m.default }))
+);
 import { slideIn } from "../../utils/motion";
 import { config } from "../../constants/config";
 import { Header } from "../atoms/Header";
@@ -125,7 +128,9 @@ const Contact = () => {
         variants={slideIn("right", "tween", 0.2, 1)}
         className="h-[350px] md:h-[550px] xl:h-auto xl:flex-1"
       >
-        <EarthCanvas />
+        <Suspense fallback={null}>
+          <EarthCanvas />
+        </Suspense>
       </motion.div>
     </div>
   );

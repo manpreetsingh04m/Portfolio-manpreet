@@ -27,6 +27,10 @@ const ExperienceCard: React.FC<TExperience> = (experience) => {
           <img
             src={experience.icon}
             alt={experience.companyName}
+            width={48}
+            height={48}
+            loading="lazy"
+            decoding="async"
             className="h-[60%] w-[60%] object-contain"
           />
         </div>

@@ -31,6 +31,10 @@ const ProjectCard: React.FC<{ index: number } & TProject> = ({
             <img
               src={image}
               alt={name}
+              width={300}
+              height={180}
+              loading="lazy"
+              decoding="async"
               className="h-full w-full rounded-2xl object-contain"
             />
             <div className="card-img_hover absolute inset-0 m-3 flex justify-end">
@@ -40,7 +44,11 @@ const ProjectCard: React.FC<{ index: number } & TProject> = ({
               >
                 <img
                   src={github}
-                  alt="github"
+                  alt="View on GitHub"
+                  width={20}
+                  height={20}
+                  loading="lazy"
+                  decoding="async"
                   className="h-1/2 w-1/2 object-contain"
                 />
               </div>
